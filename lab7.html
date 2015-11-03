@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.formHide{
+     display:none;
+}
+
+.inputLabel{
+     display:none;
+}
+
+.passLabel{
+     display:none;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#hide").hide();
+        $(".formHide").show();
+        $(".formHide").show();
+        $(".formHide").show();
+        
+    });
+    
+    $("#form1").click(function(){
+      var btn = document.createElement("Input");
+      btn.setAttribute("type","text");
+      var name = prompt("Enter your username")
+      btn.setAttribute("Value",name);
+      $(".inputLabel").show();
+      document.body.appendChild(btn);
+    });
+
+    $("#form2").click(function(){
+      var pass = document.createElement("Input");
+      pass.setAttribute("type","password");  
+      var passcode = prompt("Enter a password");
+      pass.setAttribute("Value",passcode);
+      $(".passLabel").show();
+      document.body.appendChild(pass);
+    });
+
+    $("#form3").click(function(){
+      var rad = document.createElement("radio");
+      rad.setAttribute("type","radio");  
+      document.body.appendChild(rad);
+    });
+
+   
+      $("#form4").click(function(){
+            var val = "checkbox"
+            $("#divContainer").append ( "<label for='chk_" + idCounter + "'>" + val + "</label><input id='chk_" + idCounter + "' type='checkbox' value='" + val + "' />" );
+            idCounter ++;
+        });
+ 
+    
+    
+
+
+});
+</script>
+</head>
+<body>
+
+
+
+
+<button id = "hide">Create a form</button>
+
+<button class = "formHide" id = "form1" >Create a userInput</button>
+<button class = "formHide" id = "form2">Create a Password input</button>
+<button class = "formHide" id = "form3">Radio button</button>
+<button class = "formHide" id = "form4"> Check button</button>
+<button class = "formHide" id = "form5"> File Check</button>
+<button class = "formHide" id = "form6"> Check button</button>
+<button class = "formHide" id = "form7"> Text Area</button>
+<button class = "formHide" id = "form8"> Output</button>
+
+
+
+
+</br></br>
+<label class = "inputLabel" for="form1">Username</label>
+</br>
+<label class = "passLabel" for="form1">Password</label>
+</br>
+
+</body>
+</html>
